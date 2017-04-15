@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: IssueTracker_production
-  username: IssueTracker
+  username:
   password: <%= ENV['ISSUETRACKER_DATABASE_PASSWORD'] %>
