@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 source 'https://rubygems.org'
+ruby '2.4.0'
+
 gem 'pg', '>=0.17.0'
 gem 'rails', '>=5'
 gem 'bcrypt'
