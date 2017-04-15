@@ -1,0 +1,49 @@
+@import "bootstrap";
+@import "bootstrap-sprockets";
+
+body {
+  margin-top: 51px;
+  background-color: #f1f1f1;
+}
+
+.container {
+  // background-color: #d3d3d3;
+  background-color: white;
+}
+
+.panel-default {
+  padding: 0;
+
+  .black-panel-heading {
+    background-color: #333333;
+    color: white;
+    border-color: #101010;
+  }
+}
+
+table {
+  font-size: .85em;
+}
+
+.red {
+  color: red;
+  &:hover {
+    color: #cc0000;
+  }
+}
+
+.alert {
+  margin: 10px 0;
+}
+
+.contact-customer {
+  height: 225px;
+  ul {
+    height: 163px;
+    overflow: scroll;
+  }
+}
+
+textarea {
+  height: 20em;
+}

@@ -1,0 +1,8 @@
+<h1 class="text-center">Edit Ticket</h1>
+<div class="panel-body">
+  <% if current_user.role =='customer' %>
+      <%= render 'layouts/customer_edit_form' %>
+  <% else %>
+      <%= render 'layouts/admin_edit_form' %>
+  <% end %>
+</div>
