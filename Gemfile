@@ -6,8 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 source 'https://rubygems.org'
-gem 'pg'
-gem 'rails'
+gem 'pg', '>=0.17.0'
+gem 'rails', '>=5'
 gem 'bcrypt'
 gem 'bootstrap-sass'
 gem 'jasny-bootstrap-rails'
@@ -46,7 +46,7 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
+  gem 'pg', '>=0.17.0'
   gem 'rails_12factor'
   gem 'puma'
 end
