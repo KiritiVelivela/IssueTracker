@@ -1,4 +1,4 @@
-class CreateAssignments < ActiveRecord::Migration[5.0]
+class CreateAssignments < ActiveRecord::Migration
   def change
     create_table :assignments do |t|
       t.integer :ticket_id

@@ -1,4 +1,4 @@
-class CreateTickets < ActiveRecord::Migration[5.0]
+class CreateTickets < ActiveRecord::Migration
   def change
     create_table :tickets do |t|
       t.references    :users

@@ -1,5 +1,4 @@
-class Ticket < ApplicationRecord
-
+class Ticket < ActiveRecord::Base
   belongs_to :user
   has_many :issues
   accepts_nested_attributes_for :issues, reject_if: :all_blank
@@ -22,10 +21,11 @@ class Ticket < ApplicationRecord
 
   def self.search(search)
     if search
-      joins(:user).where("title LIKE ? OR (printf('%s %s',
-                         users.first_name, users.last_name) LIKE ?) OR
-                         issue_type LIKE ? OR status == ?",
-                         "%#{search}%", "%#{search}%", "%#{search}%", "#{search.downcase}")
+      joins(:user).where("title LIKE ? OR
+                         users.first_name LIKE ? OR
+                         users.last_name LIKE ? OR
+                         issue_type LIKE ? OR status LIKE ?",
+                         "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "#{search.downcase}")
     else
       find(:all)
     end
@@ -37,5 +37,4 @@ class Ticket < ApplicationRecord
       group.tickets << self
     end
   end
-
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170415164520) do
+ActiveRecord::Schema.define(version: 20170415152528) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 20170415164520) do
   create_table "conversations", force: :cascade do |t|
     t.integer  "sender_id"
     t.integer  "recipient_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "group_memberships", force: :cascade do |t|
@@ -48,7 +48,6 @@ ActiveRecord::Schema.define(version: 20170415164520) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "user_id"
-    t.index ["ticket_id"], name: "index_issues_on_ticket_id", using: :btree
   end
 
   create_table "messages", force: :cascade do |t|
@@ -83,8 +82,8 @@ ActiveRecord::Schema.define(version: 20170415164520) do
     t.integer  "sign_in_count",          default: 0,          null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.inet     "current_sign_in_ip"
-    t.inet     "last_sign_in_ip"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
     t.datetime "created_at",                                  null: false
     t.datetime "updated_at",                                  null: false
     t.string   "first_name"

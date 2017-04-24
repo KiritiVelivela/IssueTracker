@@ -27,11 +27,12 @@ gem 'normalize-rails'
 gem 'responders'
 gem 'devise'
 gem 'tinymce-rails'
+gem 'web-console', group: :development
 
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
-  gem 'web-console'
+
   gem 'spring'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
